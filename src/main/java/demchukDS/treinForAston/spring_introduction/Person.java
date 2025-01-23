@@ -1,18 +1,25 @@
 package demchukDS.treinForAston.spring_introduction;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component("personBean")
 public class Person {
+
 //    @Autowired
+//    @Qualifier("catBean")
     private Pet pet;
+    @Value("${person.age}")
     private int age;
+    @Value("${person.firstName}")
     private String firstName;
+    @Value("${person.lastName}")
     private String lastName;
 
-    @Autowired()
-    public Person(Pet pet) {
+    @Autowired
+    public Person(@Qualifier("dogBean") Pet pet) {
         System.out.println("Person bean has created!");
         this.pet = pet;
     }
@@ -22,6 +29,7 @@ public class Person {
         System.out.println("Person bean has created!");
     }
 
+//    @Qualifier("catBean")
 //    @Autowired
     public void setPet(Pet pet) {
         System.out.println("Class Person: set pet");
