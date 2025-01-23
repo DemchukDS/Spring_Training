@@ -1,5 +1,6 @@
-package demchukDS.treinForAston.spring_introduction;
+package demchukDS.treinForAston.spring_introduction.Tests;
 
+import demchukDS.treinForAston.spring_introduction.Pet;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test2 {
