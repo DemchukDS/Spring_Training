@@ -7,16 +7,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-@Order(1)
-public class LoggingAspect {
+@Order(2)
+public class SecurityAspect {
 
     @Before("demchukDS.trainForAston.aop.aspects.MyPointcuts.pointcutAllGetMethodsFromUniLibrary()")
-    public void beforeGetLoggingAdvice() {
-        System.out.println("beforeGetLoggingAdvice: Logging try to take a book/magazine! ----->");
+    public void beforeGetSecurityAdvice() {
+        System.out.println("beforeGetSecurityAdvice: Check the rights to receive a book/magazine! ----->");
     }
 
     @Before("demchukDS.trainForAston.aop.aspects.MyPointcuts.pointcutAllReturnMethodsFromUniLibrary()")
-    public void beforeReturnLoggingAdvice() {
-        System.out.println("beforeGetLoggingAdvice: Logging try to take a book/magazine! ----->");
+    public void beforeReturnSecurityAdvice() {
+        System.out.println("beforeGetSecurityAdvice: Check the rights to receive a book/magazine! ----->");
     }
 }
