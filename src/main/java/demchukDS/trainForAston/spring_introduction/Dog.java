@@ -1,10 +1,4 @@
-package demchukDS.treinForAston.spring_introduction;
-
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
+package demchukDS.trainForAston.spring_introduction;
 
 //@Component("dogBean")
 //@Scope("prototype")

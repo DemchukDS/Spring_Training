@@ -1,6 +1,6 @@
-package demchukDS.treinForAston.spring_introduction.Tests;
+package demchukDS.trainForAston.spring_introduction.Tests;
 
-import demchukDS.treinForAston.spring_introduction.Dog;
+import demchukDS.trainForAston.spring_introduction.Dog;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ScopeTest {

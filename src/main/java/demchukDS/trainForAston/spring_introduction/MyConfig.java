@@ -1,4 +1,4 @@
-package demchukDS.treinForAston.spring_introduction;
+package demchukDS.trainForAston.spring_introduction;
 
 import org.springframework.context.annotation.*;
 

@@ -11,11 +11,11 @@
     <context:property-placeholder location="classpath:myApp.properties"/>
 
     <bean id = "myPet"
-          class = "demchukDS.treinForAston.spring_introduction.Dog">
+          class = "demchukDS.trainForAston.spring_introduction.Dog">
 
     </bean>
     <bean id = "myPerson"
-          class="demchukDS.treinForAston.spring_introduction.Person">
+          class="demchukDS.trainForAston.spring_introduction.Person">
         <property name="pet" ref="myPet"/>
         <property name="age" value="${person.age}"/>
         <property name="firstName" value="${person.firstName}"/>

@@ -1,8 +1,7 @@
-package demchukDS.treinForAston.spring_introduction.Tests;
+package demchukDS.trainForAston.spring_introduction.Tests;
 
-import demchukDS.treinForAston.spring_introduction.MyConfig;
-import demchukDS.treinForAston.spring_introduction.Person;
-import demchukDS.treinForAston.spring_introduction.Pet;
+import demchukDS.trainForAston.spring_introduction.MyConfig;
+import demchukDS.trainForAston.spring_introduction.Person;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Test6_JavaConfig {

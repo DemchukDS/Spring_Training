@@ -9,7 +9,7 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id = "myPet"
-          class = "demchukDS.treinForAston.spring_introduction.Dog"
+          class = "demchukDS.trainForAston.spring_introduction.Dog"
           scope="prototype"
           init-method="init"
           destroy-method="destroy"
