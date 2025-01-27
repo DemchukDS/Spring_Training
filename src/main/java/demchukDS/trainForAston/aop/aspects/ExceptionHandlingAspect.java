@@ -21,4 +21,10 @@ public class ExceptionHandlingAspect {
         System.out.println("beforeReturningExceptionHandlingAdvice: " +
                 "Handling exceptions when trying to return the book/magazine! ----->");
     }
+
+    @Before("demchukDS.trainForAston.aop.aspects.MyPointcuts.pointcutAllAddMethodsFromUniLibrary()")
+    public void beforeAddExceptionHandlingAdvice() {
+        System.out.println("beforeAddExceptionHandlingAdvice: " +
+                "Handling exceptions when trying to return the book/magazine! ----->");
+    }
 }

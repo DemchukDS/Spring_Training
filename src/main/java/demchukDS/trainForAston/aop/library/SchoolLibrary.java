@@ -1,4 +1,4 @@
-package demchukDS.trainForAston.aop;
+package demchukDS.trainForAston.aop.library;
 
 import org.springframework.stereotype.Component;
 

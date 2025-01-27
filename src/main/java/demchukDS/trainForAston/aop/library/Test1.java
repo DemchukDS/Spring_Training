@@ -1,5 +1,6 @@
-package demchukDS.trainForAston.aop;
+package demchukDS.trainForAston.aop.library;
 
+import demchukDS.trainForAston.aop.MyConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
@@ -11,8 +12,8 @@ public class Test1 {
         UniLibrary uniLibrary = context.getBean("uniLibraryBean", UniLibrary.class);
         Book book = context.getBean("bookBean", Book.class);
         uniLibrary.getBook(book);
-        System.out.println();
-        uniLibrary.getMagazine();
+        uniLibrary.addBook("Dmitriy", book);
+        uniLibrary.addMagazine();
 
         context.close();
     }

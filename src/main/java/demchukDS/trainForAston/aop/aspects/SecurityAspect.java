@@ -19,4 +19,9 @@ public class SecurityAspect {
     public void beforeReturnSecurityAdvice() {
         System.out.println("beforeGetSecurityAdvice: Check the rights to receive a book/magazine! ----->");
     }
+
+    @Before("demchukDS.trainForAston.aop.aspects.MyPointcuts.pointcutAllAddMethodsFromUniLibrary()")
+    public void beforeAddSecurityAdvice() {
+        System.out.println("beforeAddSecurityAdvice: Check the rights to receive a book/magazine! ----->");
+    }
 }
