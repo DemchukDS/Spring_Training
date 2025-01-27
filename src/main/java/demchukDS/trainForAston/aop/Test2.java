@@ -11,12 +11,14 @@ public class Test2 {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MyConfig.class);
 
         University university = context.getBean("universityBean", University.class);
-
         university.addStudent();
-        List<Student> students = university.getStudents();
-
-
-        System.out.println(students);
+        try {
+            List<Student> students = university.getStudents();
+            System.out.println(students);
+        }
+        catch (Exception e) {
+            System.out.println("Exception " + e);
+        }
 
         context.close();
     }
