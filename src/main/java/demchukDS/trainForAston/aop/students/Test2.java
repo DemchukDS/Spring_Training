@@ -1,7 +1,6 @@
-package demchukDS.trainForAston.aop;
+package demchukDS.trainForAston.aop.students;
 
-import demchukDS.trainForAston.aop.students.Student;
-import demchukDS.trainForAston.aop.students.University;
+import demchukDS.trainForAston.aop.MyConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;

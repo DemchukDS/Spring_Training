@@ -1,18 +1,13 @@
 package demchukDS.trainForAston.aop.aspects;
 
-import demchukDS.trainForAston.aop.students.Student;
-import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
-import java.util.SimpleTimeZone;
-
-@Component
-@Aspect
-public class UliversityLoogingAspect {
+//@Component
+//@Aspect
+public class UniversityLoggingAspect {
 
     @Before("execution(* getStudents())")
     public void BeforeGetStudentLoggingAdvice() {
