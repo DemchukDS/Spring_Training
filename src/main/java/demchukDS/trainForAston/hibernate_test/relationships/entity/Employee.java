@@ -26,6 +26,10 @@ public class Employee {
     @JoinColumn(name = "details_id")
     private Detail empDetail;
 
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    @JoinColumn(name = "departments_id")
+    private Department department;
+
     public Employee() {
     }
 
@@ -82,6 +86,14 @@ public class Employee {
 
     public void setEmpSalary(int empSalary) {
         this.empSalary = empSalary;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 
     @Override
