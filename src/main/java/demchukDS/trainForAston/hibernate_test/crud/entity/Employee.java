@@ -1,4 +1,4 @@
-package demchukDS.trainForAston.hibernate_test.entity;
+package demchukDS.trainForAston.hibernate_test.crud.entity;
 
 import jakarta.persistence.*;
 

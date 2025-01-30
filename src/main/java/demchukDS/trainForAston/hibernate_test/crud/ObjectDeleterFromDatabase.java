@@ -1,6 +1,6 @@
 package demchukDS.trainForAston.hibernate_test.crud;
 
-import demchukDS.trainForAston.hibernate_test.entity.Employee;
+import demchukDS.trainForAston.hibernate_test.crud.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
