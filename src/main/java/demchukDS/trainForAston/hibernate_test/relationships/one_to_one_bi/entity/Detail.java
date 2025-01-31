@@ -1,4 +1,4 @@
-package demchukDS.trainForAston.hibernate_test.relationships.entity;
+package demchukDS.trainForAston.hibernate_test.relationships.one_to_one_bi.entity;
 
 import jakarta.persistence.*;
 
@@ -20,7 +20,8 @@ public class Detail {
     @Column(name = "email")
     private String detailEmail;
 
-    @OneToOne (mappedBy = "empDetail", cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    @OneToOne (mappedBy = "empDetail", cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH,
+            CascadeType.DETACH})
     private Employee employee;
 
     public Detail() {

@@ -1,4 +1,4 @@
-package demchukDS.trainForAston.hibernate_test.relationships.entity;
+package demchukDS.trainForAston.hibernate_test.relationships.one_to_many_bi.entity;
 
 import jakarta.persistence.*;
 
@@ -23,7 +23,12 @@ public class Department {
     @Column(name = "max_salary")
     private int maxSalary;
 
-    @OneToMany(mappedBy = "department", cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    @OneToMany(mappedBy = "department", cascade = {
+            CascadeType.MERGE,
+            CascadeType.PERSIST,
+            CascadeType.REFRESH,
+            CascadeType.DETACH
+    }, fetch = FetchType.LAZY)
     private List<Employee> employees;
 
     public Department() {

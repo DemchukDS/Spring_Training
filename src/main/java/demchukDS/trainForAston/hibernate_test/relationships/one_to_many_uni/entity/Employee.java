@@ -1,4 +1,4 @@
-package demchukDS.trainForAston.hibernate_test.relationships.entity;
+package demchukDS.trainForAston.hibernate_test.relationships.one_to_many_uni.entity;
 
 import jakarta.persistence.*;
 
@@ -6,9 +6,9 @@ import jakarta.persistence.*;
 @Table(name = "employees", schema = "spring_train")
 public class Employee {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private String empId;
+    private long empId;
 
     @Column(name = "name")
     private String empFirstName;
@@ -22,14 +22,6 @@ public class Employee {
     @Column(name = "salary")
     private int empSalary;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "details_id")
-    private Detail empDetail;
-
-    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-    @JoinColumn(name = "departments_id")
-    private Department department;
-
     public Employee() {
     }
 
@@ -40,12 +32,12 @@ public class Employee {
         this.empSalary = empSalary;
     }
 
-    public String getEmpId() {
+    public long getEmpId() {
         return empId;
     }
 
     public void setEmpId(String empId) {
-        this.empId = empId;
+        this.empId = Long.parseLong(empId);
     }
 
     public String getEmpFirstName() {
@@ -54,14 +46,6 @@ public class Employee {
 
     public void setEmpFirstName(String empFirstName) {
         this.empFirstName = empFirstName;
-    }
-
-    public Detail getEmpDetail() {
-        return empDetail;
-    }
-
-    public void setEmpDetail(Detail empDetail) {
-        this.empDetail = empDetail;
     }
 
     public String getEmpSecondName() {
@@ -86,14 +70,6 @@ public class Employee {
 
     public void setEmpSalary(int empSalary) {
         this.empSalary = empSalary;
-    }
-
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
     }
 
     @Override

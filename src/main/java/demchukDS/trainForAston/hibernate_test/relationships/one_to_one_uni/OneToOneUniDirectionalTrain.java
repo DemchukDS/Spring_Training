@@ -1,13 +1,13 @@
-package demchukDS.trainForAston.hibernate_test.relationships;
+package demchukDS.trainForAston.hibernate_test.relationships.one_to_one_uni;
 
-import demchukDS.trainForAston.hibernate_test.relationships.entity.Detail;
-import demchukDS.trainForAston.hibernate_test.relationships.entity.Employee;
+import demchukDS.trainForAston.hibernate_test.relationships.one_to_one_uni.entity.Detail;
+import demchukDS.trainForAston.hibernate_test.relationships.one_to_one_uni.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-public class OneToOneBiDirectionalTrain {
+public class OneToOneUniDirectionalTrain {
     public static void main(String[] args) {
 
         SessionFactory sessionFactory = new Configuration()
@@ -16,37 +16,34 @@ public class OneToOneBiDirectionalTrain {
                 .addAnnotatedClass(Detail.class)
                 .buildSessionFactory();
 
-        Session session = null;
+        Session session = sessionFactory.openSession();
         Transaction tx = null;
 
         try {
-            session = sessionFactory.openSession();
             tx = session.beginTransaction();
 
-//            **** ADD DATA *****
+//            ***** ADD DATA *****
 //            Employee employee = new Employee(
-//                    "Viktoria",
-//                    "Demchuk",
-//                    "ProjectCoordinators",
-//                    600
+//                    "Vladislav",
+//                    "Kobrusev",
+//                    "IT",
+//                    3800
 //            );
 //            Detail detail = new Detail(
-//                    "Minsk",
-//                    "+375294444444",
-//                    "demchuk.va@gmail.com"
+//                    "Baranovichi",
+//                    "+375292222222",
+//                    "kobrusev_va@gmail.com"
 //            );
-//
 //            employee.setEmpDetail(detail);
-//            detail.setEmployee(employee);
-//            session.persist(detail);
+//            session.save(employee);
 
 //            ***** GET DATA *****
-//            Detail detail = session.get(Detail.class, "983b402b-14e2-4a75-9b99-9ff72a367d2c");
-//            System.out.println(detail.getEmployee());
+//            Employee employee = session.get(Employee.class, "3d63a0c9-081c-4947-a15b-5e6cd87d500c");
+//            System.out.println(employee.getEmpDetail());
 
-//            ***** DELETE DATA *****
-//            Detail detail = session.get(Detail.class, "983b402b-14e2-4a75-9b99-9ff72a367d2c");
-//            session.remove(detail.getEmployee());
+//            ***** DELETE DATA*****
+//            Employee employee = session.get(Employee.class, "3d63a0c9-081c-4947-a15b-5e6cd87d500c");
+//            session.remove(employee);
 
             tx.commit();
         }
